@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {BB3662DF-F1CC-453C-81B0-86CB4DB1DA4B}
+database: master
+path: /sitecore/system/Settings/Analytics/Multivariate Test Strategies/Weight Sticky
+parent: {938C20B4-78BE-4D2A-8999-7E4714C32E78}
+name: Weight Sticky
+master: {00000000-0000-0000-0000-000000000000}
+template: {314BE5B0-8536-45CF-900D-A84B2B335210}
+templatekey: Multivariate Test Strategy
+
+----field----
+field: {3D445351-A7D8-4C5F-A009-9AF499B44C6E}
+name: Type
+key: type
+content-length: 97
+
+Sitecore.AdvancedMVTSuite.Testing.WeightStickyMultiVariateTestStrategy, Sitecore.AdvancedMVTSuite
+----version----
+language: en
+version: 1
+revision: c3f08461-8587-4132-a123-fcae69f807dc
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20130623T171209
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c3f08461-8587-4132-a123-fcae69f807dc
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20130623T173827:635076059072223989
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
