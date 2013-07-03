@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Sitecore.AdvancedMVTSuite.Shell.Applications.Dialogs.Testing.EditStrategy>
+    <FormDialog ID="Dialog" Icon="Software/32x32/breakpoints.png" Header="Test the Component - Strategy" Text="Define the strategy for the test variants." >
+      <CodeBeside Type="Sitecore.AdvancedMVTSuite.Shell.Applications.Dialogs.Testing.EditStrategy, Sitecore.AdvancedMVTSuite"/>
+      <Script Src="/sitecore/shell/Controls/Lib/jQuery/jQuery.noconflict.js"></Script>
+      <Script Src="/sitecore modules/shell/Advanced MVT Suite/Dialogs/EditStrategy.js"></Script>
+      <Stylesheet Src="/sitecore modules/shell/Advanced MVT Suite/Dialogs/EditStrategy.css" DeviceDependant="false" />
+      <GridPanel Width="100%" Height="100%">
+        <Border GridPanel.Height="24px" GridPanel.VAlign="top" >
+          <Literal Text="Here will be combobox to choose variant"></Literal>
+        </Border>
+        <Scrollbox Padding="0px" Class="scScrollbox scFixSize scFixSize4" Height="100%" Width="100%" GridPanel.Height="100%" ID="Container">
+          <Border ID="Details">
+            <input type="hidden" id="result" name="result"></input>
+            <Script Type="text/javascript">updateResultValue();</Script>
+          </Border>
+        </Scrollbox>
+        <Border GridPanel.Class="cross-piece"></Border>
+      </GridPanel>
+    </FormDialog>
+  </Sitecore.AdvancedMVTSuite.Shell.Applications.Dialogs.Testing.EditStrategy>
+</control>

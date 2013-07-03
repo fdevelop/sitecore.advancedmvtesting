@@ -40,12 +40,15 @@ namespace Sitecore.AdvancedMVTSuite.Testing
       byte[] array = new byte[testset.Variables.Count];
       for (int i = 0; i < array.Length; i++)
       {
+        double totalWeight = settings.GetVariableTotalWeight(testset.Variables[i].Id);
+        Assert.IsTrue(totalWeight > 0.0, "At least one variant should have weight greater than 0");
+
         double genRnd = rng.NextDouble();
 
-        byte variant = 0;
+        byte? variant = new byte?();
         for (byte k = 0; k < testset.Variables[i].Values.Count; k++)
         {
-          var weight = settings.GetVariantWeight(testset.Variables[i].Id, testset.Variables[i].Values[k].Id);
+          var weight = settings.GetVariantWeight(testset.Variables[i].Id, testset.Variables[i].Values[k].Id) / totalWeight;
 
           if (genRnd <= weight)
           {
@@ -58,7 +61,7 @@ namespace Sitecore.AdvancedMVTSuite.Testing
           }
         }
 
-        array[i] = variant;
+        array[i] = variant.HasValue ? variant.Value : (byte)(genRnd * (testset.Variables[i].Values.Count - 1));
       }
 
       return new TestCombination(array, testset);
